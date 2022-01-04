@@ -15,6 +15,12 @@ jobs:
 
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1.0.2
+      
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+     
+    - name: Restore NuGet Packages
+      run: nuget restore VirtualDesktopTimecodeServer.sln
 
     - name: Create the app package
       run: msbuild VirtualDesktopTimecodeServer.sln /p:Configuration=Release
