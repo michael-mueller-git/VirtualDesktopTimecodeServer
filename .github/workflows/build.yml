@@ -1,4 +1,4 @@
-name: Build Timecode Server Extension
+name: Build Extension
 
 on:
   workflow_dispatch:
