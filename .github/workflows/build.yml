@@ -1,7 +1,9 @@
 name: Build Extension
 
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - '*'
 
 jobs:
 
@@ -9,7 +11,7 @@ jobs:
   
     strategy:
       matrix:
-        configuration: [Debug, Release]
+        configuration: [Release]
 
     runs-on: windows-latest
     
@@ -35,3 +37,12 @@ jobs:
         Appx_Bundle_Platforms: x64
         Appx_Package_Build_Mode: StoreUpload
         Configuration: ${{ matrix.configuration }}
+    
+    - name: Upload Artifact
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: bin\Release\net471\VirtualDesktopTimecodeServer.dll
+        asset_name: VirtualDesktopTimecodeServer.dll
+        tag: ${{ github.ref }}
+        overwrite: true
