@@ -1,0 +1,25 @@
+name: Build Timecode Server Extension
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+        
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 4.7.1
+
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Create the app package
+      run: msbuild VirtualDesktopTimecodeServer.sln /p:Configuration=Release
