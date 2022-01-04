@@ -15,7 +15,7 @@ Timecode Server for [Virtual Desktop Wired Version](www.vrdesktop.net). This Ext
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 - [Net Framework 4.7.1 Dev Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471)
 
-### Usage
+## Usage
 
 1. Build the Timecode Server Extension.
 2. Start Virtual Desktop.
