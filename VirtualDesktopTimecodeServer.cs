@@ -58,7 +58,7 @@ namespace VirtualDesktopTimecodeServer
             _server.BeginAcceptTcpClient(HandleConnection, _server);
         }
 
-        private void HandleConnection(IAsyncResult result)
+        private async void HandleConnection(IAsyncResult result)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace VirtualDesktopTimecodeServer
 
                 while (true)
                 {
-                    Task.Delay(TimeSpan.FromMilliseconds(_serverLoopTimeInMilliseconds));
+                    await Task.Delay(TimeSpan.FromMilliseconds(_serverLoopTimeInMilliseconds));
 
                     if (_videoPath != lastVideoFile)
                     {

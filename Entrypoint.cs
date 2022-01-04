@@ -21,7 +21,7 @@
 
         private static async Task RunTimecodeServer(string debugLogFile)
         {
-            const int UPDATE_LOOP_TIME_IN_MILLLISECONDS = 25;
+            const int UPDATE_LOOP_TIME_IN_MILLLISECONDS = 50;
             var virtualDesktopPlaybackSettings = VirtualDesktopPlaybackSettings.Instance;
             //var virtualDesktopUiSettings = VirtualDesktopUiSettings.Instance;
             var timecodeServer = VirtualDesktopTimecodeServer.Instance;
