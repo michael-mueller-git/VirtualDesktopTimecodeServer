@@ -12,6 +12,9 @@ jobs:
         configuration: [Debug, Release]
 
     runs-on: windows-latest
+    
+    env:
+      Solution_Name: VirtualDesktopTimecodeServer.sln
 
     steps:
     - name: Checkout
@@ -21,12 +24,12 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
       
     - name: Restore the application
-      run: msbuild VirtualDesktopTimecodeServer.sln /t:Restore /p:Configuration=$env:Configuration
+      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
 
     - name: Create the app package
-      run: msbuild VirtualDesktopTimecodeServer.sln /p:Configuration=$env:Configuration
+      run: msbuild $env:Solution_Name /p:Configuration=$env:Configuration
       env:
         Appx_Bundle: Always
         Appx_Bundle_Platforms: x64
