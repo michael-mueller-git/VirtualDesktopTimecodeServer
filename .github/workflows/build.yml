@@ -8,13 +8,13 @@ on:
 jobs:
 
   build:
-  
+
     strategy:
       matrix:
         configuration: [Release]
 
     runs-on: windows-latest
-    
+
     env:
       Solution_Name: VirtualDesktopTimecodeServer.sln
 
@@ -24,11 +24,11 @@ jobs:
 
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1.0.2
-      
+
     - name: Get Application Version
       id: get_version
       uses: battila7/get-version-action@v2
-        
+
     - name: Restore the application
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
       env:
@@ -41,21 +41,21 @@ jobs:
         Appx_Bundle_Platforms: x64
         Appx_Package_Build_Mode: StoreUpload
         Configuration: ${{ matrix.configuration }}
-    
+
     - name: Upload Artifact 1
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: bin\Release\net471\VirtualDesktopTimecodeServer.dll
+        file: ./bin/Release/net471/VirtualDesktopTimecodeServer.dll
         asset_name: VirtualDesktopTimecodeServer_${{ steps.get_version.outputs.version }}.dll
         tag: ${{ github.ref }}
         overwrite: true
-        
+
     - name: Upload Artifact 2
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: inject.bat
+        file: ./Assets/inject.bat
         asset_name: inject_${{ steps.get_version.outputs.version }}.bat
         tag: ${{ github.ref }}
         overwrite: true
