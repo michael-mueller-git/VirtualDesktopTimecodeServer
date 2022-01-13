@@ -4,7 +4,7 @@ Timecode Server for [Virtual Desktop Wired Version](https://www.vrdesktop.net). 
 
 ## Dependencies
 
-- [Virtual Desktop Wired Version](www.vrdesktop.net) (Testet with Version 1.18.11)
+- [Virtual Desktop Wired Version](https://www.vrdesktop.net) (Testet with Version 1.18.11)
 - [Snoop v4.0.1](https://github.com/snoopwpf/snoopwpf/releases/tag/v4.0.1)
 - [Net Framework 4.7.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471)
 
