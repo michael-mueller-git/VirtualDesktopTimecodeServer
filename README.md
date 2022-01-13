@@ -1,6 +1,6 @@
 # Virtual Desktop Timecode Server
 
-Timecode Server for [Virtual Desktop Wired Version](www.vrdesktop.net). This Extension provide the same API as the [Whirligig](http://www.whirligig.xyz/) Timecode Server.
+Timecode Server for [Virtual Desktop Wired Version](https://www.vrdesktop.net). This Extension provide the same API as the [Whirligig](http://www.whirligig.xyz/) Timecode Server.
 
 ## Dependencies
 
