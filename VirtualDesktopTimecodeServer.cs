@@ -75,7 +75,7 @@ namespace VirtualDesktopTimecodeServer
                     if (_videoPath != lastVideoFile)
                     {
                         lastVideoFile = _videoPath;
-                        byte[] videoFile = Encoding.Default.GetBytes("C" + _videoPath + "\n");
+                        byte[] videoFile = Encoding.Default.GetBytes("C " + _videoPath + "\n");
                         ns.Write(videoFile, 0, videoFile.Length);
                     }
 
@@ -94,7 +94,7 @@ namespace VirtualDesktopTimecodeServer
                         if (lastTimecode != _videoPositionInSecondsString)
                         {
                             lastTimecode = _videoPositionInSecondsString;
-                            byte[] timecode = Encoding.Default.GetBytes("P" + _videoPositionInSecondsString + "\n");
+                            byte[] timecode = Encoding.Default.GetBytes("P " + _videoPositionInSecondsString + "\n");
                             ns.Write(timecode, 0, timecode.Length);
                         }
 

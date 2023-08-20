@@ -21,3 +21,7 @@ Timecode Server for [Virtual Desktop Wired Version](https://www.vrdesktop.net). 
 2. Use `./inject_vx.x.x.bat` to inject the Timecode Server Extension to Virtual Desktop.
 3. Open an Video with Virtual Desktop that contains an Funscript in the same directory.
 4. Connect Your Funscript Player and select the Whirligig API.
+
+## MultiFunPlayer
+
+With this Timecode Server Extension you can use Virtual Desktop with [MultiFunPlayer](https://github.com/Yoooi0/MultiFunPlayer) by selecting the Whirligig video player. Due to an strict [process name check](https://github.com/Yoooi0/MultiFunPlayer/blob/1.26.1/Source/MultiFunPlayer/MediaSource/ViewModels/WhirligigMediaSourceViewModel.cs#L39-L41) for an local host IP (`127.0.0.1`), you have to use the IP of your NIC to bypass this check in MultiFunPlayer.
