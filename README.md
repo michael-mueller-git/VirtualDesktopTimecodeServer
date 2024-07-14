@@ -1,10 +1,10 @@
 # Virtual Desktop Timecode Server
 
-Timecode Server for [Virtual Desktop Wired Version](https://www.vrdesktop.net). This Extension provide the same API as the [Whirligig](http://www.whirligig.xyz/) Timecode Server.
+Timecode Server for [Virtual Desktop Wired/Classic Version](https://www.vrdesktop.net). This Extension provide the same API as the [Whirligig](http://www.whirligig.xyz/) Timecode Server.
 
 ## Dependencies
 
-- [Virtual Desktop Wired Version](https://www.vrdesktop.net) (Testet with Version 1.18.11)
+- [Virtual Desktop Wired/Classic Version](https://www.vrdesktop.net) (Testet with Version 1.18.11)
 - [Snoop v4.0.1](https://github.com/snoopwpf/snoopwpf/releases/tag/v4.0.1)
 - [Net Framework 4.7.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net471)
 
@@ -17,8 +17,8 @@ Timecode Server for [Virtual Desktop Wired Version](https://www.vrdesktop.net). 
 
 ## Usage
 
-1. Start Virtual Desktop.
-2. Use `./inject_vx.x.x.bat` to inject the Timecode Server Extension to Virtual Desktop.
+1. Start Virtual Desktop from stream.
+2. Use `./inject_vx.x.x.bat` to automatically inject the Timecode Server Extension to Virtual Desktop exe.
 3. Open an Video with Virtual Desktop that contains an Funscript in the same directory.
 4. Connect Your Funscript Player and select the Whirligig API.
 
